@@ -1,0 +1,34 @@
+@import '../../../../resources/settings.scss';
+
+.MenuItem {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: $text;
+
+  @media (max-width: $md) {
+    display: none;
+  }
+
+  & .label {
+    margin-left: 10px;
+    cursor: default;
+
+    & a {
+      color: inherit;
+      cursor: pointer;
+    }
+
+    &.active {
+      @media (max-width: $xl) {
+        display: inline;
+      }
+    }
+
+    @media (max-width: $xl) {
+      display: none;
+    }
+  }
+}

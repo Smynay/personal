@@ -1,0 +1,40 @@
+@import '../../../resources/settings.scss';
+
+.Menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+
+  .list {
+    display: inline-block;
+
+    @media (max-width: $md) {
+      &.active {
+        background-color: $primary;
+        flex-direction: column;
+        position: fixed;
+        width: 100vw;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        text-align: left;
+        padding-top: 6rem;
+        padding-left: 1rem;
+
+        & .MenuItem {
+          display: block;
+          margin-bottom: 2rem;
+          & .label {
+            display: inline-block;
+          }
+        }
+
+        @media (max-width: $xs) {
+          padding-top: 5rem;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

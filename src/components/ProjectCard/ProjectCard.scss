@@ -1,0 +1,32 @@
+@import '../../resources/settings.scss';
+
+.ProjectCard {
+  text-align: left;
+  margin-top: 2rem;
+
+  &.ml- {
+    &2 {
+      margin-left: 2rem;
+    }
+
+    &4 {
+      margin-left: 4rem;
+    }
+  }
+
+  & svg {
+    margin-right: 5px;
+  }
+
+  &__body {
+    line-height: 1.7rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
+
+  &__links {
+    a {
+      color: $accent;
+    }
+  }
+}

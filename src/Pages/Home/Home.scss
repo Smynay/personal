@@ -1,0 +1,37 @@
+@import '../../resources/settings.scss';
+
+.Home {
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    margin-right: 2rem;
+    height: 28rem;
+
+    @media (max-width: $md) {
+      display: none;
+    }
+
+    img {
+      height: 100%;
+      animation: flying 3s infinite ease-in-out;
+    }
+
+    @keyframes flying {
+      0% {
+        transform: rotate(0deg);
+      }
+      30% {
+        transform: rotate(-3deg);
+      }
+      70% {
+        transform: rotate(3deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}

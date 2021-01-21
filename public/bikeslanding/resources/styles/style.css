@@ -1,0 +1,576 @@
+@import "./pictures.css";
+
+body{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Lato', sans-serif;
+}
+
+body.lock{
+  overflow: hidden;
+}
+
+h2{
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 3.6px;
+  text-align: center;
+  color: #353738;
+  text-transform: uppercase;
+}
+
+p{
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.88;
+  letter-spacing: normal;
+  text-align: justify;
+  color: #848789;
+}
+
+header{
+  padding: 2vh 0px;
+  min-height: 40px;
+  width: 100%;
+  position: absolute;
+}
+
+header.nice{
+  background: #ffffff;
+  -webkit-box-shadow: 0px 8px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 8px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 8px 8px 0px rgba(34, 60, 80, 0.2);
+  max-height: 40px;
+}
+
+header .default{
+  height: 100%;
+}
+
+header .default ul{
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+header .default ul li{
+  display: inline-block;
+  list-style: none;
+  line-height: 85px;
+  padding: 0px 2vw;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2.6px;
+  color: #4d4959;
+  cursor: default;
+}
+
+header nav ul li a{
+  text-decoration: none;
+  outline: none;
+  color: #4d4959;
+}
+
+header nav ul li img{
+  vertical-align: middle;
+}
+
+header .flex{
+  display: flex;
+}
+
+header .flex .flex__item{
+  flex: 0 0 calc(50% - 40px);
+  padding: 0px 20px;
+  text-align: left;
+  height: 40px;
+}
+
+header .flex .flex__item.right{
+  text-align: right;
+}
+
+.mobile img{
+  width: 40px;
+}
+
+.burger{
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  width: 30px;
+  height: 20px;
+}
+
+.burger span,
+.burger:after,
+.burger:before{
+  content: '';
+  background-color: #4d4959;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  transition: all 0.4s ease 0s;
+}
+
+.burger:after{
+  top: 0;
+}
+
+.burger.active:after{
+  top: 9px;
+  transform: rotate(45deg);
+}
+
+.burger span{
+  top: 9px;
+}
+
+.burger.active span{
+  transform: scale(0);
+}
+
+.burger:before{
+  bottom: 0px;
+}
+
+.burger.active:before{
+  bottom: 9px;
+  transform: rotate(-45deg);
+}
+
+.menu{
+  overflow: auto;
+  position: fixed;
+  z-index: 30;
+  top: -150vh;
+  width: 100vw;
+  transition: all 0.4s ease 0s;
+}
+
+.menu ul{
+  height: 100vh;
+  width: calc(100%-40px);
+  padding: 60px 20px 20px 20px;
+  margin: 0px;
+  background: #282f35;
+}
+
+.menu li{
+  margin-top: 20px;
+  list-style: none;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.menu li a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu.active{
+  top: 0px;
+}
+
+@media (max-width: 550px){
+  .default{
+    display: none;
+  }
+
+  header{
+    position: fixed;
+    z-index: 100;
+  }
+}
+
+@media (min-width: 550px){
+  .mobile{
+    display: none;
+  }
+}
+
+
+.first-screen{
+  padding-top: 100vh;
+  background: url(../img/first.png) #5f2420;
+  background-position: center;
+  background-size: cover;
+}
+
+.about{
+  padding-top: 117px;
+  background: #f7f7f7;
+  padding-bottom: 114px;
+}
+
+.ico{
+  color: #64c29e;
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 14px;
+}
+
+.about p{
+  font-size: 18px;
+  line-height: 1.89;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.grid__body_first{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:  repeat(9, 1fr);
+}
+
+.grid__item{
+  position: relative;
+  text-align: center;
+}
+
+.grid__item.first.l{
+  grid-row: span 3;
+  grid-column: span 2;
+}
+
+.grid__item.first.m{
+  grid-row: span 3;
+  grid-column: span 1;
+}
+
+.grid__item.first.s{
+  grid-row: span 2;
+  grid-column: span 1;
+  padding: 70px;
+}
+
+.grid__item.first.xs{
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.grid__item.first.xs .rect{
+  border: 20px solid transparent;
+  border-top: 20px solid #ffffff;
+  margin: 0 auto;
+  width: 0px;
+  height: 15px;
+}
+
+.grid__item img{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.grid__body_second{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows:  repeat(2, 3fr);
+}
+
+.grid__item.second{
+  padding: 8vw 0px;
+}
+
+.grid__item.second.vertical{
+  grid-row-start: span 2;
+  grid-column-start: span 1;
+}
+
+.grid__item.second.horizontal{
+  grid-row-start: span 1;
+  grid-column-start: span 2;
+}
+
+@media(max-width: 900px){
+  .about{
+    padding: 40px;
+  }
+  .about p{
+    width: auto;
+    text-align: justify;
+  }
+
+  .grid__body_first{
+    grid-template-rows:  repeat(7, 1fr);
+  }
+
+  .grid__item.first.l.hide,
+  .grid__item.first.m.hide{
+    display: none;
+  }
+
+  .grid__item.xs{
+    min-height: 30vh;
+  }
+
+  .grid__item.first.l,
+  .grid__item.first.s,
+  .grid__item.first.xs{
+    grid-column: span 3;
+    grid-row: span 1;
+  }
+
+  .first-screen{
+    padding-top: 50vh;
+  }
+}
+
+@media(max-width: 1200px){
+  .grid__item.first.s{
+    padding: 40px;
+  }
+}
+
+.press{
+  background-color: #f7f7f7;
+}
+
+.press h2{
+  text-transform: none;
+}
+
+.press h2 span{
+  color: #848789;
+  font-weight: normal;
+}
+
+.press p{
+  margin: 0 auto;
+  text-align: center;
+  width: 65%;
+  font-style: italic;
+}
+
+.slick-track{
+  display: flex;
+}
+
+.slick-list{
+  overflow: hidden;
+}
+
+.slider .slick-dots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider{
+  padding-bottom: 68px;
+}
+
+.slider ul{
+  padding: 0px;
+}
+
+.slider li{
+  list-style: none;
+  margin: 0px 10px;
+}
+
+.slider .slider__item{
+  padding: 124px 0px 104px 0px;
+  text-align: center;
+}
+
+.slider .slider__item img{
+  height: 32px;
+}
+
+.slider .slick-dots button{
+  font-size: 0px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #a9afb3;
+  outline: none;
+  padding: 0px;
+}
+
+.slider .slick-dots li.slick-active button{
+  background: #a9afb3;
+}
+
+.shop{
+  padding: 3vh 0px;
+  background-color: #282f35;
+}
+
+.button{
+  display: block;
+  width: 300px;
+  height: 50px;
+  margin: 0 auto;
+  font-weight: bold;
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.subscribe{
+  padding: 3vh 0px;
+}
+
+.subscribe .logo{
+  display: block;
+  margin: 0 auto;
+}
+
+.subscribe p{
+  font-style: italic;
+  text-align: center;
+}
+
+.subscribe form{
+  display: block;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.subscribe form input{
+  max-width: 378px;
+  width: 50%;
+  line-height: 48px;
+  border: 1px solid #d3d7d9;
+  font-style: italic;
+  font-size: 24px;
+  outline: none;
+  padding: 0px 10px;
+  color: #999999;
+  margin-right: 5px;
+  vertical-align: top;
+}
+
+::-webkit-input-placeholder {
+  color: #d3d7d9;
+}
+
+.subscribe form input:hover{
+  border-color: #999999;
+}
+
+.subscribe form input:focus{
+  border-color: #999999;
+}
+
+
+.subscribe form .button{
+  display: inline-block;
+  width: auto;
+  background-color: #64c29e;
+  border-color: #64c29e;
+  font-size: 24px;
+  font-weight: 300;
+  padding: 0px 43px;
+}
+
+@media (max-width: 500px){
+  .subscribe form input{
+    font-size: 18px;
+  }
+  .subscribe form{
+    padding: 0px 10px;
+  }
+  .subscribe form .button{
+    padding: 0px 20px;
+  }
+}
+
+footer{
+  padding: 3vh 10%;
+  background: #f7f7f7;
+  position: relative;
+  text-align: justify;
+}
+
+footer p{
+  line-height: 16px;
+  font-size: 14px;
+}
+
+p .bold{
+  font-weight: bold;
+}
+
+p .italic{
+  font-style: italic;
+}
+
+.adress,
+.socials,
+.design{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.socials{
+  padding: 21px 0px 17px 0px;
+  position: relative;
+}
+
+.socials a img{
+  height: 35px;
+  padding: 0px 5px;
+}
+
+.design p{
+  line-height: 76px;
+  margin: 0px;
+}
+
+.design p img{
+  display: inline-block;
+  height: 48px;
+  vertical-align: middle;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex__item{
+  flex: 0 0 33.333%;
+  text-align: center;
+}
+
+.flex__item.design p{
+  text-align: right;
+}
+
+@media (max-width: 650px){
+  .flex{
+    display: block;
+  }
+
+  .flex__item.design p,
+  .flex__item.adress p{
+    text-align: center;
+  }
+
+  .adress,
+  .socials,
+  .design{
+    display: block;
+  }
+}
