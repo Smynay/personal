@@ -4,7 +4,7 @@ import './ProjectCard.scss';
 const ProjectCard = ({ item, position }) => {
   const { icon, title, description, gitLink, demoLink = '' } = item;
 
-  const variants = ['', 'ml-2', 'ml-4'];
+  const variants = ['ml-2', '', 'ml-4'];
 
   const addition = variants[position % 3];
 

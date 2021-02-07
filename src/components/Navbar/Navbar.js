@@ -1,5 +1,5 @@
 import './Navbar.scss';
-import logo from '../../resources/logo.svg';
+import logo from '../../assets/img/logo.svg';
 
 import Menu from './Menu/Menu';
 

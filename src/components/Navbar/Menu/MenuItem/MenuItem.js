@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import './MenuItem.scss';
 
 const MenuItem = ({ item, active, onToggle }) => {

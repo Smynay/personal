@@ -1,17 +1,10 @@
 import React from 'react';
 import './Home.scss';
-import img from '../../resources/mywork.png';
+import img from '../../assets/img/mywork.png';
 
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 
 const pinnedProjects = [
-  {
-    icon: 'code',
-    title: 'Itlanding',
-    description: 'landing page for small group of developers',
-    gitLink: 'https://github.com/Smynay/webdeveloping/tree/master/itlanding',
-    demoLink: '',
-  },
   {
     icon: 'bicycle',
     title: 'Bikeslanding',
