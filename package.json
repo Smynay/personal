@@ -6,7 +6,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix . --ignore-path ./.gitignore",
-    "format": "prettier --write ./**/*.{js,jsx,ts,tsx,css,md,json} --config ./.prettierrc --ignore-path ./.gitignore"
+    "format": "prettier --write ./**/*.{js,jsx,ts,tsx,css,md,json} --config ./.prettierrc --ignore-path ./.gitignore",
+    "export": "next export",
+    "build-prod": "npm ci && npm run build && npm run export"
   },
   "dependencies": {
     "husky": "^6.0.0",
