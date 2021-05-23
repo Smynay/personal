@@ -1,11 +1,11 @@
-import Layout from '@Components/Layout';
+import Layout from '@Layouts/Default';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
 const IndexPage = (): ReactNode => (
-  <Layout title="Home | Next.js + TypeScript Example">
+  <Layout title="Home">
     <h1>
-      Hello Next.js{' '}
+      Hello Stranger!!{' '}
       <span role="img" aria-label="hello">
         👋
       </span>

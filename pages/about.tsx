@@ -1,9 +1,9 @@
-import Layout from '@Components/Layout';
+import Layout from '@Layouts/Default';
 import Link from 'next/link';
 import { ReactElement } from 'react';
 
 const AboutPage = (): ReactElement => (
-  <Layout title="About | Next.js + TypeScript Example">
+  <Layout title="About">
     <h1>About</h1>
     <p>This is the about page</p>
     <p>
