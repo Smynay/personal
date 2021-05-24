@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
         <title>{APP_GLOBAL_TITLE}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
       </Head>
 
       <Component {...pageProps} />
